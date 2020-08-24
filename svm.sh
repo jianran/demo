@@ -35,7 +35,7 @@ echo "Compiling $ARTIFACT with $GRAALVM_VERSION"
 if [[ -f $ARTIFACT ]]
 then
   printf "${GREEN}SUCCESS${NC}\n"
-  mv ./$ARTIFACT ..
+  mv ./$ARTIFACT ../../k8s/
   exit 0
 else
   cat output.txt

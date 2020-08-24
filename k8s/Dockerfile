@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:20.1.0
-COPY target/demo /
+FROM scratch
+COPY demo /demo
 RUN chmod +x /demo
-CMD ["/demo"]
+ENTRYPOINT ["/demo"]
