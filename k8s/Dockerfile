@@ -7,5 +7,7 @@ COPY svm.sh /opt/demo-native/
 COPY META-INF /opt/demo-native/
 ENV PATH "$PATH:/opt/graalvm"
 WORKDIR /opt/demo-native/
-RUN bash -c "svm.sh"
+RUN chmod  a+x /opt/demo-native/svm.sh
+RUN bash -c "/opt/demo-native/svm.sh"
+RUN chmod  a+x /demo
 ENTRYPOINT ["/demo"]
