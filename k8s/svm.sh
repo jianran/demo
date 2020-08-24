@@ -9,19 +9,15 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 rm -rf target
-
-mkdir -p target/native-image
+mkdir -p  target/native-image
 
 echo "Packaging $ARTIFACT with Maven"
-mvn -ntp package > target/native-image/output.txt
+
 JAR="$ARTIFACT-$VERSION.jar"
 echo "Unpacking $JAR"
 cd target/native-image
 jar -xvf ../$JAR >/dev/null 2>&1
 cp -R META-INF BOOT-INF/classes
-cp -R META-INF ../../k8s
-cp ../$JAR ../../k8s/
-
 
 LIBPATH=`find BOOT-INF/lib | tr '\n' ':'`
 CP=BOOT-INF/classes:$LIBPATH
@@ -38,7 +34,7 @@ echo "Compiling $ARTIFACT with $GRAALVM_VERSION"
 if [[ -f $ARTIFACT ]]
 then
   printf "${GREEN}SUCCESS${NC}\n"
-  mv ./$ARTIFACT ..
+  mv ./$ARTIFACT /
   exit 0
 else
   cat output.txt
