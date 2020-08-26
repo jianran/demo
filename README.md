@@ -47,6 +47,9 @@
 * tar -xzvf graalvm-ce-java11.tgz
 * sudo mv graalvm-ce-java11.tar /Library/Java/JavaVirtualMachines/
 * sudo tar -xvf graalvm-ce-java11.tar
+* export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.2.0/Contents/Home
+* export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.2.0/Contents/Home
+* export PATH=$GRAALVM_HOME/bin:$PATH
 * sudo gu install native-image
 
 ## compile
