@@ -23,6 +23,8 @@
 
 # run
 
+* eval $(minikube docker-env)
+* docker login --username jianran
 * kubectl run hello   --image=jianran/hello  --port=8080
 * kubectl scale --replicas=3 deployment/hello
 * kubectl port-forward deployment/hello 8080:8080
