@@ -23,7 +23,7 @@
 
 # run
 
-* kubectl run hello   -- image=jianran/hello  --port=8080
+* kubectl run hello   --image=jianran/hello  --port=8080
 * kubectl scale --replicas=3 deployment/hello
 * kubectl port-forward deployment/hello 8080:8080
 * curl 127.0.0.1:8080/hello.htm
@@ -41,4 +41,22 @@
 * org.springframework.boot.devtools.RemoteSpringApplication
 * http://127.0.0.1:8080/
 
+# native-image
+
+## install
+* tar -xzvf graalvm-ce-java11.tgz
+* sudo mv graalvm-ce-java11.tar /Library/Java/JavaVirtualMachines/
+* sudo tar -xvf graalvm-ce-java11.tar
+* sudo gu install native-image
+
+## compile
+* javac com/example/demo/ListDir.java
+* time java com.example.demo.ListDir ~/workspace/forge
+* native-image  com.example.demo.ListDir
+* time com.example.demo.ListDir  ~/workspace/forge
+* ./svm.sh
+* cd k8s && docker build -f Dockerfile -t jianran/hello:0.0.2 .
+
+## run
+* kubectl run hello2   --image=jianran/hello:0.0.2  --port=8080
 
