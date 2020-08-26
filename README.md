@@ -30,7 +30,8 @@
 
 # dev
 
-[source,xml]
+[source]
+
 ----
 <plugin>
 				<groupId>org.springframework.boot</groupId>
