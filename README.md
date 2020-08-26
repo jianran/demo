@@ -30,15 +30,12 @@
 
 # dev
 
-[source]
-
-----
-<plugin>
+	<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludeDevtools>false</excludeDevtools>
 				</configuration>
 			</plugin>`
-----
+
 
