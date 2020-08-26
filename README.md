@@ -50,10 +50,12 @@
 * sudo gu install native-image
 
 ## compile
+* cd src/main/java/
 * javac com/example/demo/ListDir.java
 * time java com.example.demo.ListDir ~/workspace/forge
 * native-image  com.example.demo.ListDir
 * time com.example.demo.ListDir  ~/workspace/forge
+* cd ../../../
 * ./svm.sh
 * cd k8s && docker build -f Dockerfile -t jianran/hello:0.0.2 .
 
