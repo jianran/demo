@@ -30,12 +30,15 @@
 
 # dev
 
-	<plugin>
+	                <plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludeDevtools>false</excludeDevtools>
 				</configuration>
 			</plugin>`
+			
+* org.springframework.boot.devtools.RemoteSpringApplication
+* http://127.0.0.1:8080/
 
 
