@@ -14,6 +14,6 @@ public class HelloController {
     @RequestMapping("/hello.htm")
     public @ResponseBody String hello() {
         logger.error("XXX" + System.currentTimeMillis());
-        return "hello jianran";
+        return "hello jianran cc";
     }
 }
