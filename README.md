@@ -6,6 +6,7 @@
 
 ## Kubectl&Minikube
 * sudo mv minikube /usr/local/bin
+* sudo chmod a+x /usr/local/bin/minikube
 * minikube start
 * kubectl get node
 
